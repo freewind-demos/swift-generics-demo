@@ -43,11 +43,7 @@ stringStack.push("b")
 print("栈顶: \(stringStack.top!)")
 
 // ============ 泛型约束 ============
-protocol Comparable {
-    static func < (lhs: Self, rhs: Self) -> Bool
-}
-
-func findMax<T: Comparable>(_ items: [T]) -> T? {
+func findMax<T: Swift.Comparable>(_ items: [T]) -> T? {
     guard var max = items.first else { return nil }
     for item in items {
         if item > max {
